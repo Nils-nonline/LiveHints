@@ -1,0 +1,24 @@
+openapi: 3.0.4
+info:
+  title: LiveHint server
+  version: 0.1.0
+paths:
+  /:
+    get:
+      summary: Get hints using a text prompt.
+      parameters:
+      - name: input
+        in: query
+        schema:
+          type: string
+          example: How old is Joe Biden?
+      responses:
+        "200":
+          description: request successful
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: Joe Biden is 81 years old.
+        "500":
+          description: internal server error

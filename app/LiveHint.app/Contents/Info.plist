@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>24E263</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>LiveHint</string>
+	<key>CFBundleIconName</key>
+	<string>__PlaceholderAppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>swift-playgrounds-app.LiveHint</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>LiveHint</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>24B75</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTPlatformVersion</key>
+	<string>15.1</string>
+	<key>DTSDKBuild</key>
+	<string>24B75</string>
+	<key>DTSDKName</key>
+	<string>macosx15.1</string>
+	<key>DTSwiftPlaygroundsBuild</key>
+	<string>4L310</string>
+	<key>DTSwiftPlaygroundsVersion</key>
+	<string>4.6.4</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>15.1</string>
+	<key>NSAccentColorName</key>
+	<string>__PresetAccentColor</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>127.0.0.1</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>192.168.211.60</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deine Mediathek erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf Bluetooth erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deinen Kalender erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf die Kamera erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deine Kontakte erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf Face ID erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf das lokale Netzwerk erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deinen Standort erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deinen Standort erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf das Mikrofon erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deine Bewegungsdaten erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSNearbyInteractionAllowOnceUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf Informationen über Geräte in der Nähe erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du das Hinzufügen von Fotos zu deiner Mediathek erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deine Fotos erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du den Zugriff auf deine Erinnerungen erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du das Ausführen der Spracherkennung erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>NSSupportsAutomaticTermination</key>
+	<true/>
+	<key>NSSupportsSuddenTermination</key>
+	<true/>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Dieser App-Playground wurde nicht von Apple überprüft. Vergewissere dich, dass du dieser Quelle vertraust, bevor du das Tracking deines Verhaltens erlaubst, und sei vorsichtig, wenn du persönliche oder finanzielle Informationen angeben sollst.</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+		<key>UISceneConfigurations</key>
+		<dict/>
+	</dict>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>2</integer>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UILaunchScreen</key>
+		<dict/>
+	</dict>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~iphone</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+	</array>
+</dict>
+</plist>

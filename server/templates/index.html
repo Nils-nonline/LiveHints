@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="main">
+		<div>
+			<form id="theForm" action="/message/" method="GET">
+				<div>
+					<label for="input">Message</label>
+					<input name="input" id="input" value="" />
+				</div>
+			</form>
+			<button id="record" onclick = "listen();">Aufnehmen</button>
+			<div id="rates">
+			  <input type="radio" id="r1" name="rate" value="de-DE"checked> Deutsch
+			  <input type="radio" id="r2" name="rate" value="en-GB"> Englisch
+			</div>
+
+			<p id="tipps">
+				Tipps zum Überleiten:<br>
+				- Auf Rolle als Lehrer hinweisen (Frage wichtig etc.)<br>
+				- Frage loben<br>
+				- In Unterrichtszusammenhang stellen<br>
+				- pädagogischen Auftrag erläutern<br>
+				- Witz machen (wenn angebracht)<br>
+				- Komplexität betonen<br>
+				- Laut nachdenken<br>
+			</p>
+			<button onclick = "ran();">Zufällige 1. Überleitung</button><button onclick = "noran();">Allgemein</button>
+		</div>
+	 <script>
+		function noran(){
+			document.getElementById("tipps").innerHTML = "Tipps zum Überleiten:<br> - Auf Rolle als Lehrer hinweisen (Frage wichtig etc.)<br> - Frage loben<br> - In Unterrichtszusammenhang stellen<br> - pädagogischen Auftrag erläutern<br> - Witz machen (wenn angebracht)<br> - Komplexität betonen<br> - Laut nachdenken<br>"
+		}
+		function ran(){
+			const stall = [
+			  "Das ist eine wirklich spannende Frage, und ich finde es großartig, dass du an dieser Stelle so genau nachfragst. Solche Fragen zeigen, dass du dich nicht nur oberflächlich mit dem Thema beschäftigst, sondern wirklich verstehen willst, was dahintersteckt. Und genau darum ist es wichtig, die Antwort nicht zu sehr zu verkürzen, sondern sie mit dem notwendigen Tiefgang zu betrachten. Wenn wir uns anschauen, wie dieses Thema im Gesamtkontext unseres Unterrichts eingebettet ist, dann sehen wir, dass es nicht nur um eine rein sachliche Information geht, sondern auch um die Art und Weise, wie man Zusammenhänge erkennt und verknüpft. Das bedeutet, dass wir hier nicht nur eine einzelne Regel oder ein einzelnes Prinzip betrachten sollten, sondern das Ganze im Zusammenspiel mit verwandten Themen. Gerade weil es so viele Berührungspunkte gibt, möchte ich vermeiden, vorschnell eine Antwort zu geben, die womöglich mehr Fragen aufwirft als sie beantwortet. Deshalb gehe ich im Kopf gerade verschiedene Perspektiven durch, die hilfreich sein könnten, um dir eine fundierte Erklärung zu liefern. Es ist mir wichtig, dir dabei nicht nur die bloße Information zu geben, sondern auch das Verständnis dahinter mitzugeben. Schließlich geht es in der Schule nicht nur darum, Fakten auswendig zu lernen, sondern auch darum, Denken zu lernen – und das braucht manchmal eben ein bisschen Zeit. Also bleib kurz dran, ich will sicherstellen, dass du eine wirklich hilfreiche Antwort bekommst.",
+			  
+			  "Sehr gute Frage, wirklich. Ich sehe, dass du dich aktiv mit dem Stoff auseinandersetzt, und das ist eine Eigenschaft, die man gar nicht hoch genug einschätzen kann. Es ist nicht selbstverständlich, dass jemand so gezielt nachfragt – und gerade deshalb verdient die Antwort auch die nötige Sorgfalt. Ich erinnere mich gerade an verschiedene Aspekte dieses Themas, die im Laufe der Zeit in unterschiedlichen Kontexten betrachtet wurden. Es ist erstaunlich, wie oft ein einzelnes Konzept sich in mehreren Fachbereichen wiederfindet, und wie vielschichtig es dadurch werden kann. Genau das macht es aber auch notwendig, die Antwort gut zu strukturieren und nicht einfach ins Blaue hinein zu antworten. Ich denke gerade daran, wie ich das so aufbereiten kann, dass es für dich nicht nur verständlich, sondern auch einprägsam wird. Denn eine gute Antwort bringt nicht nur Klarheit für den Moment, sondern wirkt auch langfristig nach. Deshalb brauche ich einen kurzen Moment, um alle wichtigen Gedanken zu ordnen. Ich will sicherstellen, dass das, was ich dir gleich sage, wirklich Substanz hat.",
+			  
+			  "Du sprichst da etwas an, das auf den ersten Blick vielleicht einfach erscheint, aber tatsächlich steckt da viel mehr dahinter, als man zunächst vermuten würde. Ich finde es sehr sinnvoll, bei solchen Gelegenheiten nicht direkt mit einer Kurzantwort zu reagieren, sondern sich bewusst die Zeit zu nehmen, um die Komplexität der Frage zu würdigen. Denn Wissen besteht nicht nur aus Fakten – es besteht aus dem Verstehen von Zusammenhängen, von Prinzipien und von Strukturen, die oft nicht direkt sichtbar sind. Deshalb möchte ich jetzt nicht einfach etwas sagen, das dir zwar eine schnelle Rückmeldung gibt, aber im Grunde nur an der Oberfläche kratzt. Stattdessen versuche ich gerade, das Thema innerlich zu gliedern und in Beziehung zu setzen zu dem, was wir bisher besprochen haben. Dabei fällt mir auf, dass bestimmte Inhalte aus früheren Stunden hier wieder eine Rolle spielen, und das ist ein schöner Moment, um das bisher Gelernte miteinander zu verknüpfen. Auch das macht gute Bildung aus – das Entdecken von Mustern und das Nutzen von bereits erworbenem Wissen. Ich denke gerade darüber nach, wie ich dir das in wenigen klaren Gedanken vermitteln kann. Also gib mir einen Moment, ich möchte die Erklärung so aufbauen, dass sie dir wirklich weiterhilft und du damit langfristig etwas anfangen kannst.",
+			  
+			  "Danke für deine Frage – sie zeigt mir, dass du genau hinschaust und nicht einfach alles hinnimmst, was gesagt wird. Diese Art von kritischem Denken ist eine der wichtigsten Fähigkeiten, die man überhaupt entwickeln kann, und ich finde es toll, dass du diesen Weg gehst. Solche Fragen führen oft zu den besten Gesprächen im Unterricht, weil sie uns dazu bringen, über das Offensichtliche hinauszugehen und tiefer nachzudenken. Deshalb möchte ich deine Frage nicht einfach mit einem Satz abhandeln, sondern sie als Ausgangspunkt für eine etwas gründlichere Betrachtung nehmen. Ich überlege gerade, wie wir das Thema so aufziehen können, dass die Antwort nicht nur für dich, sondern auch für andere hilfreich und nachvollziehbar ist. In der Vergangenheit haben wir schon ein paar Aspekte gestreift, die hier eine Rolle spielen könnten, und ich finde es spannend zu sehen, wie sich jetzt der Bogen schließt. Während ich das sortiere, denke ich auch daran, wie man dieses Wissen später anwenden kann – sei es in Prüfungen, in Projekten oder sogar im Alltag. Das zeigt, wie wichtig es ist, nicht nur den Inhalt zu kennen, sondern ihn auch einordnen zu können. Also lass mich das kurz im Kopf durchgehen – ich will dir eine Antwort geben, die diesem Anspruch gerecht wird.",
+			  
+			  "Manchmal sind es genau diese Fragen, die einen zum Nachdenken bringen – nicht weil sie besonders kompliziert sind, sondern weil sie so viel in sich tragen. Deine Frage hat genau diese Eigenschaft, und das macht sie besonders wertvoll. Ich nehme mir gerade bewusst einen Moment, um das richtig zu sortieren, denn ich möchte, dass du nicht nur eine Antwort bekommst, sondern ein echtes Verständnis dafür entwickelst. Wenn man sich die Dinge nämlich einfach nur erklären lässt, bleibt oft nur ein Teil davon hängen – aber wenn man merkt, wie alles zusammenhängt, dann bleibt das Wissen dauerhaft im Kopf. Und genau das möchte ich dir ermöglichen. Ich gehe gerade gedanklich verschiedene Zugänge durch: Den fachlichen, den methodischen und auch den didaktischen. Jeder davon trägt auf seine Weise zur Erklärung bei. Ich glaube, wenn wir das gleich zusammen durchgehen, wirst du merken, wie viele verschiedene Perspektiven man auf ein und dieselbe Sache haben kann. Das ist das Schöne am Lernen – dass es nie nur um das Ziel geht, sondern auch um den Weg dorthin. Also bleib dran – ich bin gleich so weit.",
+			  
+			  "Was du da gerade ansprichst, ist tatsächlich ein Punkt, der in vielen Zusammenhängen immer wieder auftaucht. Und genau deshalb lohnt es sich, hier kurz innezuhalten und das Ganze mit etwas mehr Ruhe zu betrachten. Ich versuche gerade, die wichtigsten Aspekte im Kopf zu ordnen, um dir dann eine Antwort zu geben, die nicht nur korrekt, sondern auch sinnvoll aufgebaut ist. Denn letztlich geht es nicht nur darum, die 'richtige' Antwort zu geben, sondern auch darum, dass du verstehst, wie man dorthin kommt. Das stärkt nicht nur dein Verständnis für dieses konkrete Thema, sondern auch deine Fähigkeit, ähnliche Fragen selbst zu lösen. Während ich das durchdenke, denke ich auch an vergleichbare Situationen, in denen diese Problematik schon einmal Thema war. Oft hilft es, sich solche Parallelen bewusst zu machen, weil sie einem zeigen, dass viele Themen strukturell verwandt sind. So entsteht mit der Zeit ein inneres Netz an Wissen, das immer tragfähiger wird. Ich bin gleich soweit, dann gehen wir das zusammen durch – Schritt für Schritt.",
+			  
+			  "Deine Frage ist inhaltlich sehr gut gestellt, weil sie genau da ansetzt, wo es anfängt, interessant zu werden. In solchen Momenten ist es wichtig, dass man nicht einfach reflexartig antwortet, sondern dass man überlegt, welche Elemente in der Antwort wirklich zentral sind. Ich gehe gerade innerlich verschiedene Ebenen durch – fachlich, logisch, aber auch didaktisch. Denn wie man etwas erklärt, ist oft genauso wichtig wie was man erklärt. Ich möchte dir eine Struktur anbieten, an der du dich orientieren kannst, und dafür brauche ich einen Moment. Das Ziel ist, dass du das Thema nicht nur verstehst, sondern auch in neuen Zusammenhängen wiedererkennen kannst. Ich finde es wichtig, dir das so darzulegen, dass es über das unmittelbare Thema hinaus Wirkung entfaltet. Deshalb lasse ich mir einen Moment Zeit, um dir wirklich eine durchdachte Antwort zu geben, die auf mehreren Ebenen tragfähig ist. Also einen Augenblick Geduld – ich bin gleich soweit.",
+			  
+			  "Was mir an deiner Frage besonders gefällt, ist, dass sie eine Brücke schlägt zwischen dem, was wir im Unterricht behandelt haben, und dem, was darüber hinausgeht. Das zeigt, dass du nicht nur reproduzierst, sondern verknüpfst – und das ist genau das Ziel von gutem Unterricht. Um deine Frage sinnvoll zu beantworten, nehme ich mir gerade die Zeit, verschiedene Gedanken miteinander zu verknüpfen. Es geht dabei nicht nur um den Inhalt selbst, sondern auch um die Art und Weise, wie wir diesen Inhalt verstehen können. Oft ist es so, dass bestimmte Prinzipien in verschiedenen Bereichen wieder auftauchen, nur leicht anders formuliert oder angewendet. Wenn wir das erkennen, ergibt sich daraus ein viel klareres Bild. Ich gehe gerade im Kopf verschiedene Beispiele und Anwendungsmöglichkeiten durch, um die passende Formulierung für dich zu finden. Denn eine gute Erklärung ist immer auch ein bisschen maßgeschneidert. Ich will, dass du damit etwas anfangen kannst – nicht nur jetzt, sondern auch später. Daher: einen Moment bitte, ich formuliere das gerade für dich aus.",
+			  
+			  "Das Schöne an solchen Fragen ist, dass sie dazu anregen, einen Schritt zurückzutreten und das Thema aus einer höheren Perspektive zu betrachten. Und genau das versuche ich gerade zu tun. Denn während viele Dinge im ersten Moment klar erscheinen, offenbaren sich bei genauerem Hinsehen oft zusätzliche Ebenen, die man ebenfalls berücksichtigen sollte. Deine Frage ist eine gute Gelegenheit, das einmal ausführlich zu durchdenken. Ich will dir nicht einfach eine vereinfachte Version liefern, sondern dir zeigen, wie man sich mit einer solchen Frage systematisch auseinandersetzt. Ich denke dabei gerade auch an mögliche Missverständnisse, die häufig auftreten, wenn man solche Themen zu schnell erklärt. Deshalb nehme ich mir bewusst diesen Moment, um dir eine wirklich saubere, gut strukturierte Antwort zu geben. Ich bin gerade dabei, die wichtigsten Begriffe und Prinzipien innerlich zu sortieren. Es dauert nur einen kurzen Moment – dann können wir das gemeinsam erarbeiten.",
+			  
+			  "Deine Frage trifft einen Punkt, der besonders dann wichtig wird, wenn man sich nicht nur für das 'Was', sondern auch für das 'Warum' interessiert. Genau darin liegt der Schlüssel zu echtem Verständnis. Deshalb nehme ich mir jetzt gerade einen Moment, um die verschiedenen Dimensionen dieser Frage im Kopf zu durchlaufen. Ich denke an die theoretische Seite, aber auch an die Anwendung – denn Wissen, das man nicht anwenden kann, bleibt abstrakt. In der Vergangenheit haben wir ja schon einige ähnliche Strukturen gesehen, und ich versuche gerade, dir daraus ein verständliches Gesamtbild zu erstellen. Das braucht ein bisschen Zeit, weil ich dir keine isolierte Einzelinformation geben will, sondern eine Erklärung, die sich in das große Ganze einfügt. Letztlich geht es darum, dir einen Denkrahmen zu geben, in dem du dich auch selbstständig bewegen kannst. Und genau diesen Rahmen möchte ich jetzt in Worte fassen. Einen kurzen Moment bitte – ich bin fast so weit."
+			];
+
+			document.getElementById("tipps").innerHTML = stall[Math.round(Math.random()*(stall.length-1))].replaceAll(".",".<br>");
+		}
+		function listen(){
+			
+			
+			try{
+				let transcript;
+				// Constants for the language and the default language
+				const LANG = document.querySelector('input[name="rate"]:checked').value;
+				console.log(LANG)
+				//const LANG = "de-DE";
+
+				// Create a new SpeechRecognition object
+				const recognition = new (window.SpeechRecognition ||
+				  window.webkitSpeechRecognition ||
+				  window.mozSpeechRecognition ||
+				  window.msSpeechRecognition)();
+
+				// Set the language of the recognition
+				recognition.lang = LANG;
+				recognition.continuous = true;
+				recognition.interimResults = true; 
+				
+				// Event listeners for the recognition
+				recognition.onresult = (event) => {
+					
+					transcript = '';
+					for (let i = event.resultIndex; i < event.results.length; i++) {
+					  const result = event.results[i];
+					  transcript += result[0].transcript;
+					  
+					  if (result.isFinal) {
+						value = ` ${transcript}`;
+						document.getElementById("input").value = value;
+					  } else {
+						value = ` ${transcript}`;
+						document.getElementById("input").value = value;
+					  }
+					}
+					
+					
+				};
+				
+				recognition.start()
+				document.getElementById("record").onclick = ()=>{
+					recognition.stop();
+					document.getElementById('theForm').submit();
+				};
+				document.getElementById("record").innerHTML = "Stopp";
+
+			}catch{
+				console.log("Speech recognition error.")
+			}
+		}
+	</script>
+    </section>
+
+    <section id="info">
+        <div class="info-block">
+            <h1> <b> LLH (Lehrer Life Hilfe) – dein intelligenter Assistent <br>
+                 für Lehrkräfte</b></h1>
+
+            <p class="p1"><b>LLH (Lehrer Life Hilfe)</b> ist eine Künstliche Intelligenz, die speziell entwickelt wurde, um 
+                <br>Lehrerinnen und Lehrer im Alltag zu unterstützen. Sie ist genau dann zur Stelle, wenn man 
+                <br>sie am dringendsten braucht. LLH ist wie ein digitaler Begleiter, der immer hilft, wenn 
+                <br>Fragen oder Herausforderungen auftauchen.</p>
+                <ul>
+                    <li>Hilft bei Fragen</li>
+                    <li>Generiert kreative Antworten</li>
+                    <li>Bietet psychologische Unterstützung</li>
+                </ul>
+                <p class="p2"><b>LLH ist nicht nur ein Programm – es ist ein echter Freund für jeden Lehrer.</b></p>
+
+        </div>
+    </section>
+    <nav>
+        <div class= "fixed-menu">
+            <h1 class="logo">LLH</h1>
+            <div class="nav-links">
+                <a class="nav-link" href= "#main">Main</a>
+                <a class="nav-link" href="#info">Information</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="workers">
+        <p> Beteiligte an diesem Projekt: <br>
+        &bull;<strong>Anton <i>(Website)</i></strong><br>
+        &bull;<strong>Nils <i>(Backend (AI und Server) + Frontend Spracherkennung)</i></strong><br>
+        &bull;<strong>Linus <i>(App)</i></strong><br>
+        &bull;<strong>Julian <i>(Web Context + Präsentation)</i></strong><br>
+        &bull;<strong>Paula <i>(Web Context + Präsentation)</i></strong><br>
+        </p>
+    </div>
+
+    
+    <script src ="/static/program.js"></script>
+</body>
+</html>
